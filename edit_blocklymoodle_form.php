@@ -50,6 +50,7 @@ class qtype_blocklymoodle_edit_form extends question_edit_form {
         $mform->addElement('select', 'codelanguage', get_string('codelanguage', 'qtype_blocklymoodle'), $languages);
         $mform->addElement('header', 'graderinfoheader', get_string('graderinfoheader', 'qtype_blocklymoodle'));
         $mform->setExpanded('graderinfoheader');
+        $mform->addElement('textarea', 'document', get_string('document', 'qtype_blocklymoodle'), array('rows' => 10));
         $mform->addElement('editor', 'graderinfo', get_string('graderinfo', 'qtype_blocklymoodle'),
                 array('rows' => 10), $this->editoroptions);
     }
@@ -62,6 +63,7 @@ class qtype_blocklymoodle_edit_form extends question_edit_form {
         }
 
         $question->codelanguage = $question->options->codelanguage;
+        $question->document = $question->options->document;
 
         $draftid = file_get_submitted_draft_itemid('graderinfo');
         $question->graderinfo = array();
@@ -78,6 +80,7 @@ class qtype_blocklymoodle_edit_form extends question_edit_form {
         $question->graderinfo['format'] = $question->options->graderinfoformat;
         $question->graderinfo['itemid'] = $draftid;
         $question->codelanguage;
+        $question->document;
 
         return $question;
     }
