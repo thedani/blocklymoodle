@@ -10,7 +10,8 @@
         <FIELD NAME="questionid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Foreign key linking to the question table."/>
         <FIELD NAME="graderinfo" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Information shown to people with permission to manually grade the question, when they are grading."/>
         <FIELD NAME="graderinfoformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="The text format for graderinfo."/>
-        <FIELD NAME="codelanguage" TYPE="char" LENGTH="10" NOTNULL="true" DEFAULT="js" SEQUENCE="false" COMMENT="Code language."/>
+        <FIELD NAME="codelanguage" TYPE="char" LENGTH="10" NOTNULL="true" DEFAULT="js" SEQUENCE="false" COMMENT="Code language."/>          
+        <FIELD NAME="document" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Predefined XML document."/>
       </FIELDS>
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
