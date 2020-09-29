@@ -63,6 +63,7 @@ class qtype_blocklymoodle extends question_type {
         }
 
         $options->codelanguage = $formdata->codelanguage;
+        $options->document = $formdata->document;
         $options->graderinfo = $this->import_or_save_files($formdata->graderinfo,
                 $context, 'qtype_blocklymoodle', 'graderinfo', $formdata->id);
         $options->graderinfoformat = $formdata->graderinfo['format'];
@@ -74,6 +75,7 @@ class qtype_blocklymoodle extends question_type {
         $question->graderinfo = $questiondata->options->graderinfo;
         $question->graderinfoformat = $questiondata->options->graderinfoformat;
         $question->codelanguage = $questiondata->options->codelanguage;
+        $question->document = $questiondata->options->document;
     }
 
     public function delete_question($questionid, $contextid) {
