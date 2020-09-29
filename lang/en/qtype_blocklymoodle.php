@@ -54,4 +54,5 @@ $string['responsetemplate'] = 'Response template';
 $string['responsetemplateheader'] = 'Response Template';
 $string['responsetemplate_help'] = 'Use Blocklymoodle for creating code blocks, and testing it. If you program correctly, copy code and paste in special form.';
 $string['codelanguage'] = 'Code language:';
+$string['document'] = 'Content:';
 $string['attentioncopypaste'] = 'Attention! Copy the ready code that you have created, and paste it into the box below.';
