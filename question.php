@@ -38,6 +38,7 @@ class qtype_blocklymoodle_question extends question_with_responses {
 
     public $responseformat;
     public $codelanguage;
+    public $document;
     /** @var int Indicates whether an inline response is required ('0') or optional ('1')  */
     public $responserequired;
 
