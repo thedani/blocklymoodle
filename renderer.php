@@ -48,7 +48,7 @@ class qtype_blocklymoodle_renderer extends qtype_renderer {
             $result .= html_writer::tag('div', $question->format_questiontext($qa),
                     array('class' => 'qtext'));
 
-            $result .= html_writer::div('<object type="text/html" data="https://ladone.github.io/blocklycore/'. $question->codelanguage . '.html" style="height:500px; width: 100%;border: 1px solid #bbb;border-top: 2px solid #bbb;"></object>');
+            $result .= html_writer::div('<object type="text/html" data="https://blockly.sfz-cowerk.de/blocklycore/'. $question->codelanguage . '.html#' . base64_encode($question->document) . '" style="height:500px; width: 100%;border: 1px solid #bbb;border-top: 2px solid #bbb;"></object>');
 
             $currentanswer = $qa->get_last_qt_var('answer');
 
